@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Aziendale</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>Dashboard Aziendale</h1>
+            <p>Strumento professionale per la gestione e analisi dei dati</p>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Form Section -->
+            <section class="section">
+                <h2>Aggiungi Dati</h2>
+                <form id="data-form">
+                    <div class="form-group">
+                        <label for="label">Etichetta:</label>
+                        <input type="text" id="label" name="label" placeholder="Inserisci un'etichetta" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="value">Valore:</label>
+                        <input type="number" id="value" name="value" placeholder="Inserisci un valore" required>
+                    </div>
+                    <button type="submit" class="btn-primary">Aggiungi Dato</button>
+                </form>
+            </section>
+
+            <!-- Chart Options -->
+            <section class="section">
+                <h2>Opzioni Grafico</h2>
+                <div class="chart-options">
+                    <label for="chart-type">Tipo di grafico:</label>
+                    <select id="chart-type">
+                        <option value="line">Grafico a Linee</option>
+                        <option value="bar">Grafico a Barre</option>
+                        <option value="pie">Grafico a Torta</option>
+                        <option value="radar">Grafico Radar</option>
+                    </select>
+                    <button id="update-chart" class="btn-secondary">Aggiorna Grafico</button>
+                </div>
+            </section>
+
+            <!-- Data Controls -->
+            <section class="section">
+                <h2>Controlli Dati</h2>
+                <div class="controls">
+                    <button id="reset-data" class="btn-danger">Reset Dati</button>
+                    <button id="export-json" class="btn-secondary">Esporta JSON</button>
+                    <button id="export-excel" class="btn-secondary">Esporta Excel</button>
+                    <button id="export-pdf" class="btn-secondary">Esporta PDF</button>
+                    <label for="import-json">Importa JSON:</label>
+                    <input type="file" id="import-json" accept=".json">
+                </div>
+            </section>
+
+            <!-- Filters -->
+            <section class="section">
+                <h2>Filtra Dati</h2>
+                <div class="filters">
+                    <div class="filter-group">
+                        <label for="filter-min">Valore minimo:</label>
+                        <input type="number" id="filter-min" placeholder="Valore minimo">
+                    </div>
+                    <div class="filter-group">
+                        <label for="filter-max">Valore massimo:</label>
+                        <input type="number" id="filter-max" placeholder="Valore massimo">
+                    </div>
+                    <button id="apply-filter" class="btn-secondary">Applica Filtro</button>
+                </div>
+            </section>
+
+            <!-- Chart Section -->
+            <section class="section chart-section">
+                <h2>Visualizzazione Grafico</h2>
+                <canvas id="chartCanvas" width="400" height="200"></canvas>
+            </section>
+
+            <!-- Summary Section -->
+            <section class="section summary">
+                <h2>Resoconto</h2>
+                <p id="summary-text">Aggiungi dati per visualizzare un resoconto.</p>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Developed by <a href="https://biagioscaglia.com" target="_blank">Biagio Scaglia</a></p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

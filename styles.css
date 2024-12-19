@@ -1,0 +1,229 @@
+/* General Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    background: #f4f6f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(135deg, #0d6efd, #1e73ff);
+    color: #ffffff;
+    text-align: center;
+    padding: 25px 20px;
+    border-radius: 12px 12px 0 0;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+
+.header p {
+    margin: 10px 0 0;
+    font-size: 1.2rem;
+    font-weight: 400;
+    opacity: 0.85;
+}
+
+/* Section */
+.section {
+    margin-bottom: 30px;
+    padding: 25px;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.section h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 20px;
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+input, select {
+    padding: 15px;
+    font-size: 1.1rem;
+    color: #495057;
+    background: #f8f9fa;
+    border: 1px solid #ced4da;
+    border-radius: 10px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 8px rgba(13, 110, 253, 0.5);
+    outline: none;
+}
+
+/* Buttons */
+button {
+    padding: 15px 20px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    display: inline-block;
+    text-align: center;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+/* Buttons Colors */
+.btn-primary {
+    background: linear-gradient(135deg, #0d6efd, #1e73ff);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #084298, #0056b3);
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, #6c757d, #495057);
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background: linear-gradient(135deg, #5a6268, #343a40);
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, #dc3545, #b02a37);
+    color: #fff;
+}
+
+.btn-danger:hover {
+    background: linear-gradient(135deg, #a71d2a, #8a1e24);
+}
+
+/* Filters */
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.filter-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.filter-group label {
+    font-weight: 600;
+    color: #495057;
+    font-size: 1rem;
+}
+
+.filter-group input {
+    display: block;
+}
+
+/* Chart */
+.chart-section canvas {
+    margin: 25px auto;
+    display: block;
+    max-width: 100%;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    background: #f8f9fa;
+    padding: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Summary */
+.summary {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.summary p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #495057;
+    line-height: 1.6;
+}
+
+/* Footer */
+.footer {
+    background: #0d6efd;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    font-size: 1rem;
+    border-radius: 0 0 12px 12px;
+}
+
+.footer a {
+    color: #ffffff;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.footer a:hover {
+    text-decoration: none;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    form {
+        flex-direction: column;
+    }
+
+    .filters {
+        flex-direction: column;
+    }
+
+    .controls, .filters, .chart-options {
+        grid-template-columns: 1fr;
+    }
+
+    button {
+        width: 100%;
+    }
+}
